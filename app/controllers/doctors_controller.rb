@@ -8,6 +8,8 @@ class DoctorsController < ApplicationController
   end
 
   def create
+    doctor = Doctor.create(doctor_params)
+    redirect_to doctor
   end
 
   def show
