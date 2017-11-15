@@ -5,10 +5,11 @@ class DoctorsController < ApplicationController
   def new
   end
 
-  def create 
+  def create
   end
 
   def show
+    @doctor = Doctor.find(params[:id])
   end
 
 end
