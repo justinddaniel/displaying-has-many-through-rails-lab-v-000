@@ -12,4 +12,10 @@ class PatientsController < ApplicationController
   def show
   end
 
+  private
+
+  def patient_params
+    params.require(:patient).permit(:name, :age, appointments: [])
+  end
+
 end
